@@ -1,0 +1,17 @@
+@import 'foundation-sites';
+@import 'settings';
+.top-bar {
+    position: relative;
+    top: 0;
+    height: 70px;
+    width: 100%;
+    background-color: $isobar-orange;
+    padding: 0;
+}
+
+#isobar_logo {
+    height: 70px;
+    margin-left: 10px;
+}
+
+#contact {}
