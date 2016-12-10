@@ -1,12 +1,23 @@
 @import 'foundation-sites';
 @import 'settings';
+
+@font-face {
+    font-family: Segoe;
+    src: url("../fonts/segoeui.ttf");
+}
+
+body{
+	font-family: Segoe;
+}
+
 .top-bar {
     position: relative;
     top: 0;
     height: 70px;
     width: 100%;
-    background-color: $isobar-orange;
+    background-color: #a06248;
     padding: 0;
+    color: white;
 }
 
 #isobar_logo {
@@ -14,4 +25,37 @@
     margin-left: 10px;
 }
 
-#contact {}
+#contact {
+	 margin-right: 10px;
+	 margin-top:25px;
+	 font-size:20px;
+}
+
+#contactFormClose{
+	position: absolute;
+    top: -4px;
+    right: 10px;
+    font-size: 30px;
+}
+
+.top-bar-center{
+	position: relative;
+    left: 30%;
+    top: 16px;
+}
+#searchbar{
+	margin-top:30px;
+	background-color:white;
+	text-align:center;
+	border-bottom-color:#a06248;
+	border-left-color:white;
+	border-right-color:white;
+	border-top-color:white;
+	// border-left-color:#a06248;
+	// border-right-color:#a06248;
+	color:#a06248;
+	box-shadow: inset 0px 0px 0px #000;
+}
+.top-bar input{
+	max-width:500px;
+}

@@ -4,7 +4,7 @@
          <meta content="text/html; charset=UTF-8; X-Content-Type-Options=nosniff" http-equiv="Content-Type">
          <meta http-equiv="X-UA-Compatible" content="IE=edge">
          <meta name="csrf-token" content="{{ csrf_token() }}" />
-         <title>Laravel + Foundation Boilerplate</title>
+         <title>Auction affiliates</title>
  
          <meta name="description" content="">
          <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -21,20 +21,23 @@
  
      <body>
          
-         <div class="top-bar">
-             <img src="{{asset('images/isobar_logo.png')}}" alt="" id="isobar_logo">
-             <div class="top-bar-right">
-                 <button id="cart">
-                    <img src="{{asset('images/shopping_cart.png')}}" alt="" id="shopping_cart">
-                 </button>
-             
-             <button id="contact">@{{message.contact}}</button>
-             </div>
-         </div>
-
+         <div id="app">
+            <top-bar-component></top-bar-component>
          @yield('content')
-         
+            <contact-form-component></contact-form-component> 
+         </div>
          @yield('scripts')
          <script src="{{asset('js/app.js')}}"></script>
+           <script>
+            window.Laravel = { csrfToken: '{{ csrf_token() }}' };
+        </script>
+        <script type="text/javascript" src="{{ URL::asset('js/jquery.hideseek.js') }}"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js" integrity="sha384-I6F5OKECLVtK/BL+8iSLDEHowSAfUo76ZL9+kGAgTRdiByINKJaqTPH/QVNS1VDb" crossorigin="anonymous"></script>
+        <script>
+         //    $('#searchbar').hideseek({
+         //      attribute: 'text',
+         // });
+        </script>
+   
      </body>
  </html>

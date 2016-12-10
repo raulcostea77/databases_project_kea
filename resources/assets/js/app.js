@@ -4,6 +4,11 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 require('./foundation');
+$(document).foundation();
+
+
+
+
 
 
 /**
@@ -12,14 +17,7 @@ require('./foundation');
  * the application, or feel free to tweak this setup for your needs.
  */
 
-Vue.component('example', require('./components/Example.vue'));
+Vue.component('top-bar-component', require('./components/top-bar-component.vue'));
+Vue.component('contact-form-component', require('./components/contact-form-component.vue'));
 
-var app = new Vue({
-    el: '.top-bar',
-    data: {
-        message: {
-            contact: 'Contact us',
-            cart: 'Cart'
-        }
-    }
-})
+const app = new Vue().$mount('#app');

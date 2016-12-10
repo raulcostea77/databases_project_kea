@@ -231,4 +231,8 @@ return [
 
     ],
 
+    'contact_recipient' => [
+        'raul.costea@isobar.com'
+    ]
+
 ];
