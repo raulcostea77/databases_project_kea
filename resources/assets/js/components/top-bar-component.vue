@@ -1,12 +1,16 @@
 <template>
     <div class="top-bar">
-                 <img src="images/auction_logo.png" alt="" id="isobar_logo" class="top-bar-left">
+                 <a href="/"><img src="images/auction_logo.png" alt="" id="isobar_logo" class="top-bar-left"></a>
                  <!-- <div class="top-bar-center">
                      <div class="form-group">
                        <input id="searchbar" type="text" class="form-control" placeholder="Search" name="search" data-list=".col-md-2">
                     </div>
-                  </div>   -->
+                  </div>-->
                  <div class="top-bar-right">
+                 <!-- <button id="admin">
+                 <a href="{{url('/login')}}">Login</a>
+                 </button> -->
+                 <a href="/admin" id="admin">Admin</a>
                  
                  <button id="contact" v-on:click="openModal">{{contact}}</button>
                  </div>

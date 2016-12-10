@@ -27,7 +27,7 @@ body{
 
 #contact {
 	 margin-right: 10px;
-	 margin-top:25px;
+	 margin-top:20px;
 	 font-size:20px;
 }
 
@@ -56,6 +56,24 @@ body{
 	color:#a06248;
 	box-shadow: inset 0px 0px 0px #000;
 }
-.top-bar input{
-	max-width:500px;
+
+#loginbox{
+	margin-top:50px;
+}
+.row .links{ 
+	text-align:center;
+	
+	a{
+		color:#a06248;
+		text-decoration:underline;
+		font-weight:bold;
+		text-align:center;
+	}
+}
+
+#admin{
+	margin-right: 20px;
+	margin-top:20px;
+	font-size: 20px;
+	color:white;
 }

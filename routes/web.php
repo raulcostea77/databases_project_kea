@@ -46,3 +46,7 @@ Route::get('collections/{id}','CollectionController@getProducts');
 Route::get('materials', 'MaterialController@index');
 Route::get('materials/{id}','MaterialController@getProducts');
 
+
+Auth::routes();
+
+Route::get('/admin', 'HomeController@index');
