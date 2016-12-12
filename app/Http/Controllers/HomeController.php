@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Product;
 
 class HomeController extends Controller
 {
@@ -21,8 +22,25 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+  
+        public function index()
     {
-        return view('admin');
+        // $products= Product::all();
+        $products= Product::paginate(10);
+        return view('admin',compact('products'));
     }
+
+        public function delete($i)
+        {
+
+           $product=Product::find($i);
+           $product->collections()->detach();
+           $product->categories()->detach();
+           $product->materials()->detach(); 
+           $product->delete();
+           return view('admin',compact('products'));
+        }
+
+
+
 }

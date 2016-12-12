@@ -10,7 +10,7 @@ class CatalogueController extends Controller
     //
     public function index()
     {
-    	$catalogue= Catalogue::all();
+    	$catalogues= Catalogue::simplePaginate(30);
     	return view('catalogues.index',compact('catalogues'));
     }
 

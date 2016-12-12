@@ -10,7 +10,7 @@ class CreatorController extends Controller
     //
     public function index()
     {
-    	$creators= Creator::all();
+    	$creators= Creator::simplePaginate(30);
     	return view('creators.index',compact('creators'));
     }
 

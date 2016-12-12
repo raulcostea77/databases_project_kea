@@ -15,22 +15,27 @@ class ProductController extends Controller
     	return view('products.index',compact('products'));
     }
 
-    public function getMaterials($i)
+    public static function getMaterials($i)
     {   
         $product=Product::find($i);
         return $product->materials->toArray();
     }
 
-    public function getCollections($i)
+    public static function getCollections($i)
     {   
         $product=Product::find($i);
         return $product->collections->toArray();
     }
 
-    public function getCategories($i)
+    public static function getCategories($i)
     {   
         $product=Product::find($i);
         return $product->categories->toArray();
+    }
+     public static function getOrigin($i)
+    {   
+        $product=Product::find($i);
+        return $product->origins->toArray();
     }
 
 

@@ -28,8 +28,6 @@ Route::get('origins/{origin}', 'OriginController@showProducts');
 Route::get('models', 'ModelController@index');
 Route::get('models/{model}', 'ModelController@showProducts');
 
-Route::get('origins', 'OriginController@index');
-Route::get('origins/{origin}', 'OriginController@showProducts');
 
 Route::get('creators', 'CreatorController@index');
 Route::get('creators/{creator}', 'CreatorController@showProducts');
@@ -50,3 +48,5 @@ Route::get('materials/{id}','MaterialController@getProducts');
 Auth::routes();
 
 Route::get('/admin', 'HomeController@index');
+
+Route::get('/delete/{id}', 'HomeController@delete');

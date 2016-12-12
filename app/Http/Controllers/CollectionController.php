@@ -10,7 +10,7 @@ class CollectionController extends Controller
     //
     public function index()
     {
-    	$collections= Collection::all();
+    	$collections= Collection::simplePaginate(50);
     	return view('collections.index',compact('collections'));
     }
 

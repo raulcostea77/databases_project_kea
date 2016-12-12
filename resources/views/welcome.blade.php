@@ -28,6 +28,16 @@
                 </div>
             </div>
         </div>
+
+        <div class="row">
+        <div class="large-10 large-push-1 columns">
+        @foreach ($products as $product)
+                <div class="large-4 columns">            
+                        <img src="{{$product->thumb}}">
+                 </div>       
+        @endforeach
+        </div>
+        </div>
         {{-- <div class="medium-6 columns">
             <h1>Laravel 5</h1>
             <p>Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, queueing, and caching.</p>

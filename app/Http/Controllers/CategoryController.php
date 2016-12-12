@@ -10,7 +10,7 @@ class CategoryController extends Controller
     //
     public function index()
     {
-    	$categories= Category::all();
+    	$categories= Category::simplePaginate(30);
     	return view('categories.index',compact('categories'));
     }
 

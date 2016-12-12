@@ -77,3 +77,32 @@ body{
 	font-size: 20px;
 	color:white;
 }
+ .product-container{
+ 	margin-top: 50px;
+
+ 		.product-image-container{
+ 			float: left;
+ 			height: 100%;
+
+ 			img{
+ 				width: 300px;
+ 				height: 300px;
+ 			}
+
+ 		}
+ 		.product-text-container{
+ 			text-align: center
+ 				
+
+ 		}
+
+ }
+
+ .artistsList{
+ 	margin-top: 100px;
+ 	a{
+ 		color:#a06248;
+ 		font-weight:bold;
+ 		font-size: 25px;
+ 	}
+ }

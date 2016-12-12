@@ -10,7 +10,7 @@ class OriginController extends Controller
     //
     public function index()
     {
-    	$origins= Origin::all();
+    	$origins= Origin::simplePaginate(30);
     	return view('origins.index',compact('origins'));
     }
 

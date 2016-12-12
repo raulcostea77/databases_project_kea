@@ -11,4 +11,5 @@ class Collection extends Model
     {
         return $this->belongsToMany(Product::class, 'product_collections');
     }
+       
 }

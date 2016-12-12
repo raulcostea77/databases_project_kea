@@ -20,7 +20,7 @@ class Product extends Model
       public function origin()
     {
     	return $this->belongsTo(Origin::class);
-    }
+    } 
 
       public function creator()
     {
