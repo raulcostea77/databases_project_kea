@@ -17,7 +17,8 @@ class MaterialController extends Controller
      public function getProducts($i)
     {   
         $material=Material::find($i);
-        $materialProducts=$material->products();
+        $materialProducts=$material->products()->paginate(10);
         return view('materials.products',compact('materialProducts'));
     }
+     
 }

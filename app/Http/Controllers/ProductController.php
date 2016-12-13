@@ -37,6 +37,10 @@ class ProductController extends Controller
         $product=Product::find($i);
         return $product->origins->toArray();
     }
+    public static function search($name){
+        $searchedProducts=Product::where('title','LIKE','%'.$name.'%')->get();
+        return view('products.search',compact($searchedProducts));
+    }
 
 
 }

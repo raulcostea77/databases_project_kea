@@ -33,7 +33,7 @@
             @foreach ($collectionProducts as $product)
         <?php
 
-        	var_dump($collectionProducts);
+        	
        	
             $materials=ProductController::getMaterials($product->id);
             $collections=ProductController::getCollections($product->id);
@@ -81,11 +81,11 @@
         @endforeach
 
             
-    {{--         	<div class="row">
+            	<div class="row">
         <div class="large-10 large-push-1 columns">
-            <a href="{{$creators->previousPageUrl()}}" style="float:left">Previous Page</a>
-            <a href="{{$creators->nextPageUrl()}}" style="float:right">Next Page</a>
+            <a href="{{$collectionProducts->previousPageUrl()}}" style="float:left">Previous Page</a>
+            <a href="{{$collectionProducts->nextPageUrl()}}" style="float:right">Next Page</a>
             </div>
-        </div> --}}
+        </div>
 </div>
 @endsection

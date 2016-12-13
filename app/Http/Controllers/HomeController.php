@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Product;
+use Illuminate\Support\Facades\Redirect;
 
 class HomeController extends Controller
 {
@@ -32,13 +33,14 @@ class HomeController extends Controller
 
         public function delete($i)
         {
-
+       
            $product=Product::find($i);
            $product->collections()->detach();
            $product->categories()->detach();
            $product->materials()->detach(); 
            $product->delete();
-           return view('admin',compact('products'));
+           return Redirect::back();
+           
         }
 
 

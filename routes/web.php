@@ -11,10 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'ProductController@index');
 Route::post('/','ClientsController@store');
+
+Route::get('products?search={name}','ProductController@search');
 
 Route::get('products', 'ProductController@index');
 

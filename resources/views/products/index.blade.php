@@ -4,7 +4,7 @@
 ?>
     <div class="row">
         <div class="large-10 large-push-1 columns">
-            <form role="search">
+            <form action="products" role="search">
                           <div class="form-group">
                             <input id="searchbar" type="text" class="form-control" placeholder="Search" name="search" data-list=".products">
                           </div>

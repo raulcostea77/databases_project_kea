@@ -17,7 +17,7 @@ class CollectionController extends Controller
       public function getProducts($i)
     {   
         $collection=Collection::find($i);
-        $collectionProducts=$collection->products();
+        $collectionProducts=$collection->products()->paginate(10);;
         return view('collections.products',compact('collectionProducts'));
     }
 }

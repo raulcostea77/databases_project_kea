@@ -17,7 +17,7 @@ class CategoryController extends Controller
       public function getProducts($i)
     {   
         $category=Category::find($i);
-        $categoryProducts=$category->products();
+        $categoryProducts=$category->products()->paginate(10);;
         return view('categories.products',compact('categoryProducts'));
     }
 }
