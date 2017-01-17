@@ -34,11 +34,11 @@
             </div>
         </div>
         <div class="products">
-        @foreach ($products as $product)
+        @foreach ($searchedProducts as $searchedProduct)
         <?php
-            $materials=ProductController::getMaterials($product->id);
-            $collections=ProductController::getCollections($product->id);
-            $categories=ProductController::getCategories($product->id);
+            $materials=ProductController::getMaterials($searchedProduct->id);
+            $collections=ProductController::getCollections($searchedProduct->id);
+            $categories=ProductController::getCategories($searchedProduct->id);
             
             if(empty($collections)){
                 $collections[0]['name']='Unknown';
@@ -51,13 +51,13 @@
         <div class="row">
         <div class="large-10 large-push-1 columns product-container">
            <div class="product-image-container">        
-                <img src="{{$product->thumb}}">
+                <img src="{{$searchedProduct->thumb}}">
             </div>
            <div class="product-text-container">
-                <h4>{{$product->title}}</h4>
-                <p>{{$product->description}}</p>
-                <span>Width: {{$product->width}}, Height:{{$product->height}}, Depth{{$product->depth}}</span>
-                <p>Origin:{{$product->origin}}</p>
+                <h4>{{$searchedProduct->title}}</h4>
+                <p>{{$searchedProduct->description}}</p>
+                <span>Width: {{$searchedProduct->width}}, Height:{{$searchedProduct->height}}, Depth{{$searchedProduct->depth}}</span>
+                <p>Origin:{{$searchedProduct->origin}}</p>
                 <p>Materials:
                     @foreach($materials as $material)
                         {{$material['name']}}
@@ -73,7 +73,7 @@
                         <li>{{$category['name']}}</li>
                     @endforeach
                 <div class="linkToAuction">
-                    <a href="{{$product->url}}">Visit auction</a>
+                    <a href="{{$searchedProduct->url}}">Visit auction</a>
                 </div>
            </div>
                
@@ -83,8 +83,8 @@
         </div>
         <div class="row">
         <div class="large-10 large-push-1 columns">
-            <a href="{{$products->previousPageUrl()}}" style="float:left">Previous Page</a>
-            <a href="{{$products->nextPageUrl()}}" style="float:right">Next Page</a>
+            <a href="{{$searchedProducts->previousPageUrl()}}" style="float:left">Previous Page</a>
+            <a href="{{$searchedProducts->nextPageUrl()}}" style="float:right">Next Page</a>
         </div>
         </div>
         {{-- <div class="medium-6 columns">

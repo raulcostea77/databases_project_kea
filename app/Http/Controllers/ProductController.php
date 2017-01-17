@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+// use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Request;
 use App\Product;
 
 class ProductController extends Controller
@@ -37,9 +38,10 @@ class ProductController extends Controller
         $product=Product::find($i);
         return $product->origins->toArray();
     }
-    public static function search($name){
-        $searchedProducts=Product::where('title','LIKE','%'.$name.'%')->get();
-        return view('products.search',compact($searchedProducts));
+    public static function search(Request $request){
+         $query = Request::input('search');
+        $searchedProducts=Product::where('title','LIKE','%'.$query.'%')->paginate(10);
+        return view('products.search',compact('searchedProducts'));
     }
 
 

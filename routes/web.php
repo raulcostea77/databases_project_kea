@@ -14,9 +14,10 @@
 Route::get('/', 'ProductController@index');
 Route::post('/','ClientsController@store');
 
-Route::get('products?search={name}','ProductController@search');
+ //Route::get('products?search={name}','ProductController@search');
 
-Route::get('products', 'ProductController@index');
+//Route::get('products', 'ProductController@index');
+Route::resource('search', 'ProductController@search');
 
 
 Route::get('sites', 'SiteController@index');
